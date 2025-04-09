@@ -5,15 +5,7 @@ __pycache__/
 
 # Virtual environment
 venv/
-ENV/
-env/
-.venv/
-env.bak/
-venv.bak/
-
-# Environment variables
-.env
-.env.*
+.env/
 
 # IDE & editor configs
 .vscode/
