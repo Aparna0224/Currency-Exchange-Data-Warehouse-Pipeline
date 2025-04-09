@@ -1,0 +1,66 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+env.bak/
+venv.bak/
+
+# Environment variables
+.env
+.env.*
+
+# IDE & editor configs
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints
+
+# Logs and outputs
+*.log
+
+# Database / dump files
+*.sqlite
+*.sqlite3
+*.db
+
+# Prefect-specific
+prefect.yaml
+
+# Cache
+*.cache
+.mypy_cache/
+.pytest_cache/
+__pypackages__/
+
+# Test artifacts
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Power BI / Excel temp files
+~$*.xlsx
+~$*.xlsm

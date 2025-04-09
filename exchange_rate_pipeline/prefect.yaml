@@ -1,0 +1,46 @@
+name: exchange-rate-pipeline
+prefect-version: 3.3.3
+entrypoint: prefect_flow.py:exchange_rate_pipeline
+version: 1
+
+deployments:
+- name: ten-minute-exchange-rate
+  entrypoint: prefect_flow.py:exchange_rate_pipeline
+  schedule:
+    interval: 600
+  work_pool:
+    name: default-agent-pool
+    work_queue_name: default
+    job_variables: {}
+  version:
+  tags: []
+  concurrency_limit:
+  description:
+  parameters: {}
+  schedules:
+  - interval: 600.0
+    anchor_date: '2025-04-08T21:56:30.657510+00:00'
+    timezone: UTC
+    active: true
+  pull:
+  - prefect.deployments.steps.set_working_directory:
+      directory: D:\IA3\DE\exchange_rate_pipeline
+- name: default
+  version:
+  tags: []
+  concurrency_limit:
+  description:
+  entrypoint: prefect_flow.py:exchange_rate_pipeline
+  parameters: {}
+  work_pool:
+    name: default-agent-pool
+    work_queue_name:
+    job_variables: {}
+  schedules:
+  - interval: 600.0
+    anchor_date: '2025-04-08T22:11:03.247454+00:00'
+    timezone: UTC
+    active: true
+  pull:
+  - prefect.deployments.steps.set_working_directory:
+      directory: D:\IA3\DE\exchange_rate_pipeline
